@@ -34,9 +34,10 @@ def calculate_mtx_dist(images, nx = 9, ny = 6, verbose = False):
             imgpoints.append(corners)
 
             # Draw and display the corners
-#             cv2.drawChessboardCorners(img, (nx,ny), corners, ret)
-#             write_name = 'output_images/corners_found/corners_found'+str(idx)+'.jpg'
-#             cv2.imwrite(write_name, img)
+            if verbose:
+              cv2.drawChessboardCorners(img, (nx,ny), corners, ret)
+              write_name = 'output_images/corners_found/corners_found'+str(idx)+'.jpg'
+              cv2.imwrite(write_name, img)
     #         cv2.imshow('img', img)
     #         cv2.waitKey(500)
 
